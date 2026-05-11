@@ -6,6 +6,14 @@ This standard defines premier-grade repository onboarding, scaffolding, and oper
 
 PixelOffice combines practical software-development tooling with a manager-simulation interface where AI agents are represented by pixel sprites with visible roles, tasks, and progress states.
 
+## Naming Alignment
+
+- **Platform concept name:** PixelOffice
+- **Repository/program name in this workspace:** NueVue
+- **Operational command-center surface:** Nexus Command Hub (web app module)
+
+These names describe the same ecosystem from product, repository, and module viewpoints.
+
 ## Product Definition
 
 PixelOffice is a website app service platform for learning, managing, and shipping software with AI agents through a professional workspace and lightweight simulation layer.
@@ -136,6 +144,8 @@ repo-root/
         └── release.yml
 ```
 
+This baseline is Node.js/TypeScript-first. If additional runtimes are used, add equivalent runtime-version files and setup instructions (for example, Python, Ruby, or JVM tooling) in the same repository standard.
+
 ## Startup Quickstart Foundation
 
 Target: a new developer reaches a working local environment in under one hour.
@@ -168,6 +178,10 @@ Target: a new developer reaches a working local environment in under one hour.
 - Agent usage policy
 - Release process
 - Support and escalation paths
+
+### Prompt Files Policy
+
+`prompts/` files define reusable role-aligned prompt baselines for supported model families. Repositories should document when each prompt is allowed, which role owns it, and where approval is required before changing production-facing prompts.
 
 ### Command Standard
 

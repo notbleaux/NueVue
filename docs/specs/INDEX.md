@@ -1,4 +1,4 @@
-# NueVue Technical Specifications and PRD Index
+# NueVue (PixelOffice) Technical Specifications and PRD Index
 
 This document is the single source of truth for product requirements and technical design.
 

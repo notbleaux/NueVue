@@ -1,4 +1,4 @@
-# PRD-01: Nexus Web App (Deluxe Homepage + Command Hub UI)
+# PRD-01: NueVue Web App (Nexus Command Hub Deluxe Homepage + UI)
 
 ## Objective
 
