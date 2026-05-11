@@ -13,6 +13,7 @@ This document is the single source of truth for product requirements and technic
 
 - [Platform Services Technical Design](../architecture/platform-services-technical-design.md)
 - [Launch Gates and Risk Controls](../architecture/launch-gates-and-risk-controls.md)
+- [Premier Onboarding Standards](../standards/pixeloffice-premier-onboarding-standards.md)
 - [Command Hub OpenAPI](../api/command-hub-openapi.yaml)
 - [Activity Event Schema](../api/activity-event-schema.json)
 - [Activity Taxonomy](../api/activity-taxonomy.md)

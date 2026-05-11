@@ -93,3 +93,4 @@ Core interaction roles:
 Single source of truth:
 
 - [`docs/specs/INDEX.md`](docs/specs/INDEX.md)
+- [`docs/standards/pixeloffice-premier-onboarding-standards.md`](docs/standards/pixeloffice-premier-onboarding-standards.md)
