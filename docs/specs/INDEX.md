@@ -9,7 +9,7 @@ This document is the single source of truth for product requirements and technic
 - [PRD-03 Browser Extension](../prd/PRD-03-browser-extension.md)
 - [PRD-04 Docs and Operations](../prd/PRD-04-docs-and-operations.md)
 - [PRD-05 Identity and Access](../prd/PRD-05-identity-and-access.md)
-- [PRD-06 Design System and Visualization Kit](../prd/PRD-06-design-system-and-visualization-kit.md)
+- [PRD-06 Design System and Pixel Visualization Kit](../prd/PRD-06-design-system-and-visualization-kit.md)
 - [PRD-07 Public Website and Docs Portal](../prd/PRD-07-public-website-and-docs-portal.md)
 - [PRD-08 Guided Onboarding and Learning Quests](../prd/PRD-08-guided-onboarding-and-learning-quests.md)
 

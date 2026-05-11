@@ -1,4 +1,4 @@
-# PRD-08: Guided Onboarding + Learning Quests (In-App)
+# PRD-08: Guided Onboarding and Learning Quests (In-App)
 
 ## Objective
 
@@ -44,4 +44,3 @@ Turn onboarding into an interactive, role-aligned experience inside Nexus so new
 - A new user can complete a “first workflow” dry run without external documentation
 - Quest milestones are visible in the timeline and office scene with correlation IDs
 - Operators are guided into safe release/incident procedures with explicit confirmation gates
-

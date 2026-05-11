@@ -1,4 +1,4 @@
-# PRD-06: Design System + Pixel Visualization Kit (Sprites, Motion, Accessibility)
+# PRD-06: Design System and Pixel Visualization Kit (Sprites, Motion, Accessibility)
 
 ## Objective
 
@@ -45,4 +45,3 @@ Provide a consistent, accessible design system and a reusable visualization kit 
 - Office scene can render presence and progress from activity events without bespoke per-screen logic
 - Motion can be disabled while preserving meaning (no information loss)
 - Sprite states and cues map directly to real workflow state transitions
-
