@@ -87,3 +87,10 @@ Core interaction roles:
 - Prefer explicit contracts between services.
 - Preserve clear separation between product UI and agent orchestration logic.
 - Ensure onboarding docs evolve with architecture changes.
+
+## Technical Specs and PRDs
+
+Single source of truth:
+
+- [`docs/specs/INDEX.md`](docs/specs/INDEX.md)
+- [`docs/standards/pixeloffice-premier-onboarding-standards.md`](docs/standards/pixeloffice-premier-onboarding-standards.md)
