@@ -33,3 +33,8 @@ This document is the single source of truth for product requirements and technic
 - [Early Access Runbook](../operations/early-access-runbook.md)
 - [Release and Patch Process](../operations/release-and-patch-process.md)
 - [Onboarding Guide](../onboarding/early-access-onboarding.md)
+
+## Planning Artifacts (Instances)
+
+- [OKR-001 Foundation](../okr/OKR-001-foundation.md)
+- [ARD-001 Nexus Office Scene + Activity Backbone](../ard/ARD-001-nexus-office-scene-and-activity-backbone.md)
