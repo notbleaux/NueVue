@@ -31,11 +31,11 @@ NueVue command operations use a hybrid model:
 
 ## Data Flow
 
-1. User submits command in Nexus UI or Extension
+1. User submits command in Nexus or Extension
 2. API validates and stores request
 3. Orchestration processes request and emits events
 4. Realtime service broadcasts events to subscribed clients
-5. Nexus UI updates command panel, timeline, and board state
+5. Nexus updates command panel, timeline, and board state
 
 ## Reliability and Observability
 

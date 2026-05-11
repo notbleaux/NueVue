@@ -37,10 +37,10 @@ The repository follows these baseline standards:
 - Lightweight AI interaction panel for in-browser workflow support.
 - Context bridge to connect page tasks with project boards.
 
-### 3) Website App Service Platform
-- User/workspace/project management.
-- Agent orchestration and task pipelines.
-- Startup templates and quickstart foundations.
+### 3) Public Website and Docs Portal
+- Public landing and product education.
+- Documentation and onboarding entry point.
+- Roadmap/changelog surface.
 
 ## AI Interaction Model
 

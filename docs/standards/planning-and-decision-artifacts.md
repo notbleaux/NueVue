@@ -2,6 +2,16 @@
 
 This document defines *what* planning/decision artifacts exist in NueVue and *when* they are required. The goal is to reduce ambiguity, keep decisions auditable, and make agent-driven execution predictable and easy to visualize in the Nexus office simulation.
 
+## Canonical Naming (Use These Terms)
+
+- **PixelOffice**: the platform concept and product philosophy.
+- **NueVue**: this repository/workspace program name.
+- **Nexus** (Nexus Command Hub): the authenticated web app surface (dashboard + command center).
+- **Command Hub API**: the backend API contract consumed by Nexus and the browser extension.
+- **Office scene**: the animated visualization metaphor (rooms/zones + sprites) used by Nexus to show progress and social cues.
+
+If a document needs to mention older or alternative names, define them once and then use the canonical terms for the rest of the document.
+
 ## Artifact Glossary
 
 ### OKR (Objectives and Key Results)
@@ -73,6 +83,40 @@ Rules:
 6. Splits created with acceptance criteria and role assignment.
 7. Implementation proceeds with the Planner/Builder/Reviewer/Operator loop.
 
+## Minimum Artifact Set (Avoid Over-Processing)
+
+Not all work needs all artifacts. Use the smallest set that preserves clarity and safety.
+
+### Tier 0: Low-Risk / Trivial Change
+
+Examples: typo fixes, rewording, small formatting changes, purely internal refactors with no behavior change.
+
+Required:
+- None beyond the change itself.
+
+### Tier 1: Standard Feature Work (Within Existing Boundaries)
+
+Examples: new UI panel behavior, new non-breaking endpoint, small workflow tweak that does not change contracts/schemas.
+
+Required:
+- PRD (new or updated)
+- Splits (task breakdown + definition of done)
+
+Optional (recommended when the choice is non-obvious):
+- ADR (if there is a meaningful tradeoff or alternative)
+- CRIT (design CRIT when risk is unclear)
+
+### Tier 2: Architecture / Contract / Safety Work
+
+Examples: any API/event schema change, new service boundary, auth/authz changes, irreversible actions, release/incident workflow changes.
+
+Required:
+- PRD
+- ARD
+- ADR (for the key decision points)
+- CRIT (design CRIT before build, integration CRIT before ship)
+- Splits
+
 ## Agent + Surface Model (IDE, Terminal, Chat)
 
 NueVue’s “office” visualization works best when all interaction surfaces emit the same activity model:
@@ -90,4 +134,3 @@ Represent work as an animated office with social cues that reflect real delivery
 - **Progress**: visible WIP limits per room, queue visualization for `queued -> in_progress -> review_pending -> completed`.
 
 If animation is too heavy early on, start with a static office layout + subtle transitions, then layer richer animation later.
-

@@ -42,7 +42,7 @@ Exit checks:
 
 ## Risk Controls
 
-- Contract tests between Nexus UI and APIs
+- Contract tests between Nexus and APIs
 - Idempotent command processing
 - Retry plus dead-letter handling in orchestration
 - Stream freshness alerting
