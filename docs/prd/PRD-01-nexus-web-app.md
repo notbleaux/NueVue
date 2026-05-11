@@ -23,18 +23,23 @@ Deliver a premium command-center homepage that gives project managers and agent 
    - Filter by project, role, severity, and status
    - Support near-real-time updates from activity stream
 
-3. **Project Board Snapshot**
+3. **Office Scene Visualization (Animated)**
+   - Visualize agent presence and handoffs as an office scene (planning/build/review/ops zones)
+   - Provide visual + social cues for progression (approvals, blockers, escalations, WIP/queues)
+   - Reflect work happening across surfaces (IDE, terminal, chat) in one coherent timeline using correlation IDs
+
+4. **Project Board Snapshot**
    - Show milestone progress bars
    - Show blocker cards and SLA risk indicators
    - Provide direct action links to approve/retry/escalate/cancel workflows
 
-4. **Service Health Cards**
+5. **Service Health Cards**
    - Show API service status
    - Show orchestration service status
    - Show realtime service status
    - Show uptime and latest incidents
 
-5. **Release Rail**
+6. **Release Rail**
    - Show current version
    - Show patch status
    - Show test pass trend

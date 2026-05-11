@@ -9,6 +9,7 @@ Ensure architecture, operations, and release practices remain documented and exe
 - Architecture overview
 - API contracts and event taxonomy
 - Role-based operating model (Planner, Builder, Reviewer, Operator)
+- Planning and decision artifacts (OKR, ARD, ADR, CRIT, splits)
 - Incident and patch runbook
 - Early-access onboarding guide
 
@@ -23,5 +24,6 @@ Ensure architecture, operations, and release practices remain documented and exe
 ## Acceptance Criteria
 
 - All required docs are discoverable from one index
+- Templates exist for OKR/ARD/ADR/CRIT and are linked from the index
 - Incident and patch response steps are actionable by operators
 - Every release stage includes explicit go/no-go criteria
