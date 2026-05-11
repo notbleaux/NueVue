@@ -1,0 +1,355 @@
+openapi: 3.1.0
+info:
+  title: NueVue Command Hub API
+  version: 1.0.0
+  description: >
+    API contract for command and query operations used by the Nexus Web App and Browser Extension.
+servers:
+  - url: https://api.nuevue.example.com/v1
+security:
+  - bearerAuth: []
+paths:
+  /workspaces:
+    post:
+      summary: Create workspace
+      operationId: createWorkspace
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateWorkspaceRequest'
+      responses:
+        '201':
+          description: Workspace created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Workspace'
+  /projects:
+    post:
+      summary: Create project
+      operationId: createProject
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateProjectRequest'
+      responses:
+        '201':
+          description: Project created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Project'
+  /milestones:
+    post:
+      summary: Create milestone
+      operationId: createMilestone
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateMilestoneRequest'
+      responses:
+        '201':
+          description: Milestone created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Milestone'
+  /tasks:
+    post:
+      summary: Create task
+      operationId: createTask
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateTaskRequest'
+      responses:
+        '201':
+          description: Task created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+  /orchestration/runs:
+    post:
+      summary: Start orchestration workflow run
+      operationId: startOrchestrationRun
+      parameters:
+        - $ref: '#/components/parameters/IdempotencyKey'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StartRunRequest'
+      responses:
+        '202':
+          description: Run accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RunAcceptedResponse'
+  /orchestration/actions:
+    post:
+      summary: Perform workflow action
+      operationId: postOrchestrationAction
+      parameters:
+        - $ref: '#/components/parameters/IdempotencyKey'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrchestrationActionRequest'
+      responses:
+        '202':
+          description: Action accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RunAcceptedResponse'
+  /activity/stream:
+    get:
+      summary: Get activity stream
+      operationId: getActivityStream
+      parameters:
+        - in: query
+          name: project_id
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: since
+          required: false
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: Activity events
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  events:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ActivityEvent'
+                required: [events]
+  /releases/status:
+    get:
+      summary: Get release status
+      operationId: getReleaseStatus
+      responses:
+        '200':
+          description: Release status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReleaseStatus'
+  /services/health:
+    get:
+      summary: Get platform service health
+      operationId: getServicesHealth
+      responses:
+        '200':
+          description: Service health cards data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServicesHealth'
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  parameters:
+    IdempotencyKey:
+      in: header
+      name: Idempotency-Key
+      required: true
+      schema:
+        type: string
+      description: Required for safe retries on write operations.
+  schemas:
+    CreateWorkspaceRequest:
+      type: object
+      properties:
+        name:
+          type: string
+      required: [name]
+    Workspace:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+      required: [id, name]
+    CreateProjectRequest:
+      type: object
+      properties:
+        workspace_id:
+          type: string
+        name:
+          type: string
+      required: [workspace_id, name]
+    Project:
+      type: object
+      properties:
+        id:
+          type: string
+        workspace_id:
+          type: string
+        name:
+          type: string
+      required: [id, workspace_id, name]
+    CreateMilestoneRequest:
+      type: object
+      properties:
+        project_id:
+          type: string
+        name:
+          type: string
+      required: [project_id, name]
+    Milestone:
+      type: object
+      properties:
+        id:
+          type: string
+        project_id:
+          type: string
+        name:
+          type: string
+      required: [id, project_id, name]
+    CreateTaskRequest:
+      type: object
+      properties:
+        project_id:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+      required: [project_id, title]
+    Task:
+      type: object
+      properties:
+        id:
+          type: string
+        project_id:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+      required: [id, project_id, title]
+    StartRunRequest:
+      type: object
+      properties:
+        project_id:
+          type: string
+        task_id:
+          type: string
+        actor_role:
+          type: string
+          enum: [planner, builder, reviewer, operator]
+      required: [project_id, task_id, actor_role]
+    OrchestrationActionRequest:
+      type: object
+      properties:
+        run_id:
+          type: string
+        action:
+          type: string
+          enum: [approve, retry, escalate, cancel]
+        reason:
+          type: string
+      required: [run_id, action]
+    RunAcceptedResponse:
+      type: object
+      properties:
+        run_id:
+          type: string
+        correlation_id:
+          type: string
+        status:
+          type: string
+      required: [run_id, correlation_id, status]
+    ActivityEvent:
+      type: object
+      properties:
+        event_id:
+          type: string
+        project_id:
+          type: string
+        actor_role:
+          type: string
+          enum: [planner, builder, reviewer, operator]
+        action_type:
+          type: string
+        status:
+          type: string
+        severity:
+          type: string
+          enum: [info, warning, critical]
+        timestamp:
+          type: string
+          format: date-time
+        correlation_id:
+          type: string
+        payload:
+          type: object
+          additionalProperties: true
+      required:
+        - event_id
+        - project_id
+        - actor_role
+        - action_type
+        - status
+        - severity
+        - timestamp
+        - correlation_id
+        - payload
+    ReleaseStatus:
+      type: object
+      properties:
+        version:
+          type: string
+        patch_status:
+          type: string
+        test_pass_trend:
+          type: string
+      required: [version, patch_status, test_pass_trend]
+    ServicesHealth:
+      type: object
+      properties:
+        api:
+          $ref: '#/components/schemas/ServiceHealthCard'
+        orchestration:
+          $ref: '#/components/schemas/ServiceHealthCard'
+        realtime:
+          $ref: '#/components/schemas/ServiceHealthCard'
+      required: [api, orchestration, realtime]
+    ServiceHealthCard:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [healthy, degraded, down]
+        uptime_24h:
+          type: number
+        last_incident:
+          type: string
+          format: date-time
+      required: [status, uptime_24h]

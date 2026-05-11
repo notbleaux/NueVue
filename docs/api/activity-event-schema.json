@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nuevue.example.com/schemas/activity-event.json",
+  "title": "NueVue Activity Event",
+  "type": "object",
+  "required": [
+    "event_id",
+    "project_id",
+    "actor_role",
+    "action_type",
+    "status",
+    "severity",
+    "timestamp",
+    "correlation_id",
+    "payload"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "actor_role": {
+      "type": "string",
+      "enum": ["planner", "builder", "reviewer", "operator"]
+    },
+    "action_type": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["info", "warning", "critical"]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "correlation_id": {
+      "type": "string"
+    },
+    "payload": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}
