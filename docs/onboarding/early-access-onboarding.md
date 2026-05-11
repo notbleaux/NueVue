@@ -7,7 +7,7 @@ New contributors and operators supporting Foundation through Early Access Live.
 ## Onboarding Steps
 
 1. Read [spec index](../specs/INDEX.md)
-2. Review PRD-01 through PRD-04
+2. Review PRDs relevant to your area (PRD-01 through PRD-08)
 3. Review platform technical design and API contracts
 4. Learn role model responsibilities:
    - Planner: milestone/task planning
