@@ -1,2 +1,89 @@
 # NueVue
-AI Agent app that displays AI agent activity and collaborations within a pixel Sprite video game UI, tooling,  using the Chat and Multi-Agent Conferencing Chats also. Visualization for Plugin
+
+NueVue is a **PixelOffice-inspired AI Agent Visualization Platform** designed to make software project planning and onboarding more intuitive.
+
+It combines:
+- a Web App,
+- a Browser Extension,
+- and a Website/Platform Service,
+
+to simulate a manager-style experience where users can collaborate with AI agents, plan projects, and learn development workflows in a social, game-like environment.
+
+## Product Intent
+
+NueVue provides a pixel-sprite assistant that helps users:
+- understand repository structure,
+- learn development-to-production workflows,
+- coordinate planner-style project management with AI agents,
+- and onboard into coding through guided, personable interactions.
+
+## Premier Grade Process & Standards
+
+The repository follows these baseline standards:
+- **Single source of truth documentation** for onboarding, architecture, and startup flow.
+- **Service separation by concern** (Web App, Extension, Website Platform).
+- **Scaffold-first development** so startup teams can begin quickly and scale later.
+- **AI interaction safety** via explicit role boundaries (Planner, Builder, Reviewer, Operator).
+- **Incremental delivery** with minimal, testable, reversible changes.
+
+## Platform Components
+
+### 1) Web App
+- PixelOffice-style dashboard for agent activity visualization.
+- Planner and project management interface.
+- Chat + multi-agent conferencing view.
+
+### 2) Browser Extension
+- Lightweight AI interaction panel for in-browser workflow support.
+- Context bridge to connect page tasks with project boards.
+
+### 3) Website App Service Platform
+- User/workspace/project management.
+- Agent orchestration and task pipelines.
+- Startup templates and quickstart foundations.
+
+## AI Interaction Model
+
+Core interaction roles:
+- **Planner Agent**: breaks goals into milestones and tasks.
+- **Builder Agent**: executes scoped implementation tasks.
+- **Reviewer Agent**: validates quality, risks, and completion criteria.
+- **Operator Agent**: handles deployment, runtime checks, and status.
+
+## Onboarding Flow
+
+1. Create workspace and select startup template.
+2. Configure app surfaces (Web App, Extension, Platform Service).
+3. Initialize planner board and first milestone.
+4. Assign tasks to AI agent roles.
+5. Run build/review/deploy loop with visible agent activity.
+
+## Suggested Repository Scaffold (Startup & Quickstart)
+
+```text
+/
+├── apps/
+│   ├── web/                # Web App UI (pixel agent visualization + planner)
+│   ├── extension/          # Browser extension client
+│   └── website/            # Marketing/site shell and docs surface
+├── services/
+│   ├── api/                # Platform API (projects, users, orchestration)
+│   ├── orchestration/      # Agent workflow engine and task routing
+│   └── realtime/           # Presence/events/activity streams
+├── packages/
+│   ├── ui/                 # Shared components/design tokens
+│   ├── agent-sdk/          # Shared AI agent integration client
+│   └── config/             # Shared lint/build/ts/format configs
+├── infra/                  # Deployment/IaC and environment setup
+└── docs/
+    ├── onboarding/         # New developer onboarding guides
+    ├── standards/          # Engineering and release standards
+    └── architecture/       # System architecture and diagrams
+```
+
+## Development Principles
+
+- Keep changes small and composable.
+- Prefer explicit contracts between services.
+- Preserve clear separation between product UI and agent orchestration logic.
+- Ensure onboarding docs evolve with architecture changes.
