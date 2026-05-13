@@ -26,6 +26,16 @@ Use `docs/standards/component-prioritization-scorecard.md` to score components (
 
 ## Early Sprints (Draft Targets)
 
+## Next 5 Short-Term Actions (High-Leverage)
+
+These are the highest-leverage tasks to complete in the current planning sessions before implementation scaffolding begins.
+
+1. Update `docs/adr/ADR-001-activity-transport-and-replay.md` with replay window + retention policy.
+2. Update `docs/adr/ADR-001-activity-transport-and-replay.md` with the Phase 2 push choice (SSE vs WebSocket) and reconnect flow.
+3. Add a minimal scene-state schema (derived from `docs/api/activity-event-schema.json`) and link it from ADR-002 and PRD-06.
+4. Extend `docs/adr/ADR-003-polyrepo-and-shared-contracts.md` with contract versioning/consumption (contracts repo vs package; semver rules).
+5. Apply the scorecard in `docs/standards/component-prioritization-scorecard.md` to the first wave Must Haves and record results in SPLITS.
+
 ### Sprint 0: Portfolio Scaffold + Contracts
 
 - Establish polyrepo boundaries (NeXeZ surfaces, NuMuN services, shared contracts).
@@ -59,4 +69,3 @@ Use `docs/standards/component-prioritization-scorecard.md` to score components (
 - **Internal Beta**: add push delivery (SSE/WebSocket) without changing the event model; keep replay authoritative.
 - **Early Access Live**: harden release gates, incident ops, and contract compatibility checks across repos.
 - **Later experiments**: incubate SATOR-inspired framework exploration after core platform stability is proven.
-

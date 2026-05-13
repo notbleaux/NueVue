@@ -2,6 +2,12 @@
 
 This document turns `OKR-001` into reviewable, vertically-sliced work units.
 
+## Notes (Naming)
+
+- **NeXeZ**: website + authenticated web app experience (includes Nexus).
+- **Nexus**: the authenticated web app module (command center + office scene).
+- **NuMuN**: platform services (API + orchestration + realtime) powering NeXeZ.
+
 ## Split A: Activity Backbone (Contracts + Replay Correctness)
 
 - Scope:
@@ -16,7 +22,7 @@ This document turns `OKR-001` into reviewable, vertically-sliced work units.
 - Rollback:
   - Keep existing schema and taxonomy; additions must be backwards-compatible only
 
-## Split B: Nexus Office Scene Phase 1 (Static + Meaningful)
+## Split B: NeXeZ (Nexus) Office Scene Phase 1 (Static + Meaningful)
 
 - Scope:
   - Static office scene layout (zones: planning/build/review/ops)
@@ -30,7 +36,7 @@ This document turns `OKR-001` into reviewable, vertically-sliced work units.
 - Rollback:
   - Feature-flag office scene; timeline remains primary UI
 
-## Split C: Nexus Timeline + Filters (Operator Usability)
+## Split C: NeXeZ (Nexus) Timeline + Filters (Operator Usability)
 
 - Scope:
   - Timeline filters by role/severity/status/project
@@ -53,4 +59,3 @@ This document turns `OKR-001` into reviewable, vertically-sliced work units.
   - Document reconnect flow: push disconnect → replay catch-up → resume push
 - Rollback:
   - Push remains optional; polling continues to work
-
