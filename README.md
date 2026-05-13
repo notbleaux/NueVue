@@ -9,6 +9,12 @@ It combines:
 
 to simulate a manager-style experience where users can collaborate with AI agents, plan projects, and learn development workflows in a social, game-like environment.
 
+## Product Naming (Canonical)
+
+- **NeXeZ**: the website + authenticated web app experience (premium UI + visualization + command center).
+- **NuMuN platform services**: API + orchestration + realtime activity backbone powering NeXeZ and other clients.
+- **NueVue**: this repo/workspace program name (PixelOffice-inspired).
+
 ## Product Intent
 
 NueVue provides a pixel-sprite assistant that helps users:

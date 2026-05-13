@@ -2,7 +2,7 @@
 
 ## Objective
 
-Provide reliable backend services for workspace/project management, multi-agent workflow execution, and live activity delivery to the Nexus Web App and extension clients.
+Provide reliable backend services for workspace/project management, multi-agent workflow execution, and live activity delivery to the NeXeZ web app (Nexus) and extension clients.
 
 ## Service Scope
 

@@ -1,4 +1,4 @@
-# PRD-01: NueVue Web App (Nexus)
+# PRD-01: NeXeZ Web App (Nexus)
 
 ## Objective
 

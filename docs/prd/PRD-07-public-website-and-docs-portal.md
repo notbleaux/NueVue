@@ -1,4 +1,4 @@
-# PRD-07: Public Website and Docs Portal
+# PRD-07: NeXeZ Public Website and Docs Portal
 
 ## Objective
 

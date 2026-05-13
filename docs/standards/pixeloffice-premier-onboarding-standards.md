@@ -50,6 +50,26 @@ Use a multi-repository portfolio by default.
 | `pixeloffice-design-system` | Design tokens, sprite standards, UI components, motion rules | Design Platform | Foundation |
 | `pixeloffice-infra` | Deployment, environments, secrets policy, monitoring, IaC | DevOps | Later Foundation |
 
+### NueVue Workspace Mapping (NeXeZ + NuMuN)
+
+This workspace is **NueVue** (PixelOffice-inspired). The near-term strategy is:
+
+- **NeXeZ**: website + authenticated web app experience (premium UI + visualization + command center).
+- **NuMuN platform services**: the unified backend systems (API, orchestration, realtime) powering NeXeZ and other clients.
+- **Shared contracts**: versioned OpenAPI + schemas + taxonomy consumed by all repos.
+
+Recommended polyrepo portfolio (names are illustrative; keep boundaries even if names differ):
+
+| Repository | Purpose | Primary owner | Stage |
+|---|---|---|---|
+| `nexez-site` | Public website + docs portal | Frontend/Web | Foundation |
+| `nexez-web` | Authenticated web app (“command center” + office visualization) | Product App | Foundation |
+| `nexez-extension` | Browser extension client | Extension | Alpha |
+| `numun-api` | REST API surface and business entities | Platform | Foundation |
+| `numun-orchestration` | Workflow orchestration + state transitions | Platform | Foundation |
+| `numun-realtime` | Activity streaming + replay delivery | Platform | Foundation |
+| `numun-contracts` | OpenAPI + JSON schemas + taxonomy (versioned) | Platform | Foundation |
+
 ### Alternative Early-Stage Monorepo
 
 For a very small team, use one monorepo while preserving boundaries:

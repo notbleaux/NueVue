@@ -6,7 +6,7 @@ Render the office scene with accessible DOM/SVG first, with an upgrade path
 
 ## Status
 
-- Proposed
+- Accepted
 
 ## Context
 
@@ -30,12 +30,12 @@ Use a **DOM/SVG-first approach**:
 - Implement motion as progressive enhancement:
   - Phase 1: static layout + subtle transitions
   - Phase 2: sprite presence + handoffs with limited animation primitives
-  - Phase 3: richer cues if performance remains acceptable
+  - Phase 3: richer cues via PixiJS (when needed) using the same scene-state model
 - Treat reduced-motion mode as a first-class equivalent:
   - state changes use non-motion cues (position, color, iconography, labels)
   - all cues remain readable and screen-reader describable.
 
-If event volume and animation complexity outgrow DOM/SVG performance, evaluate a move to Canvas/WebGL while keeping the same scene-state model.
+If event volume and animation complexity outgrow DOM/SVG performance, use PixiJS as the preferred Canvas/WebGL path while keeping the same scene-state model.
 
 ## Alternatives Considered
 
@@ -61,4 +61,3 @@ If event volume and animation complexity outgrow DOM/SVG performance, evaluate a
 
 - Define a minimal “scene state” schema (derived from `ActivityEvent`) to drive rendering.
 - Document motion tokens and reduced-motion fallbacks in the design system work (PRD-06).
-

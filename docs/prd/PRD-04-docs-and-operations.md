@@ -20,6 +20,7 @@ Ensure architecture, operations, and release practices remain documented and exe
 - Release notes for every deployment
 - Rollback criteria and procedures for every release tier
 - Documentation updates in the same cycle as service/API changes
+- Baseline deployment target: Vercel for NeXeZ web surfaces; Railway or Render for NuMuN services; Docker Compose for local multi-service dev
 
 ## Acceptance Criteria
 

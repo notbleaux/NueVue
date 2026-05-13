@@ -36,7 +36,7 @@ Provide a consistent, accessible design system and a reusable visualization kit 
 ## Non-Functional Requirements
 
 - Accessibility: reduced motion, keyboard navigation, readable contrast, screen-reader semantics for progress/state
-- Performance: animations do not degrade core UI responsiveness; limit reflows and excessive canvas work
+- Performance: animations do not degrade core UI responsiveness; prefer DOM/SVG for baseline and use PixiJS only when needed for richer cues
 - Internationalization-ready for labels and tooltips
 
 ## Acceptance Criteria

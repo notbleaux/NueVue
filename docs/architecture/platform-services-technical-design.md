@@ -39,6 +39,12 @@ NueVue command operations use a hybrid model:
 
 ## Reliability and Observability
 
+## Local Dev and Deployment Baseline
+
+- **Local dev**: use Docker Compose to run NuMuN services together (API + orchestration + realtime) with a shared contracts version pinned for the workspace.
+- **Web surfaces**: deploy NeXeZ website/web app to Vercel.
+- **Services**: deploy NuMuN services to Railway or Render (environment separation per release stage).
+
 - Idempotency keys required on write commands
 - Retries with bounded exponential backoff
 - Dead-letter queue for unprocessable orchestration events

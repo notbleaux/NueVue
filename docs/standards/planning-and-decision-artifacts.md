@@ -6,7 +6,9 @@ This document defines *what* planning/decision artifacts exist in NueVue and *wh
 
 - **PixelOffice**: the inspiration and product philosophy (not a module name in this repo).
 - **NueVue**: this repository/workspace program name.
-- **Nexus**: the authenticated web app surface (dashboard + command center).
+- **NeXeZ**: the premium website + web app product experience built on top of this workspace.
+- **Nexus**: the authenticated web app module within NeXeZ (dashboard + command center).
+- **NuMuN platform services**: the unified backend systems that power NeXeZ and other clients (API + orchestration + realtime).
 - **Command Hub API**: the backend API contract consumed by Nexus and the browser extension.
 - **Office scene**: the visualization metaphor (zones + sprites) used by Nexus to show progress and social cues.
 
