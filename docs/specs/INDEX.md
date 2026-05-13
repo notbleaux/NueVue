@@ -38,3 +38,7 @@ This document is the single source of truth for product requirements and technic
 
 - [OKR-001 Foundation](../okr/OKR-001-foundation.md)
 - [ARD-001 Nexus Office Scene + Activity Backbone](../ard/ARD-001-nexus-office-scene-and-activity-backbone.md)
+- [ADR-001 Activity Transport and Replay Strategy](../adr/ADR-001-activity-transport-and-replay.md)
+- [ADR-002 Office Scene Rendering Approach](../adr/ADR-002-office-scene-rendering-approach.md)
+- [CRIT-001 Foundation Design CRIT](../crit/CRIT-001-foundation-design.md)
+- [SPLITS-001 OKR-001 Foundation](../splits/SPLITS-001-okr-001-foundation.md)

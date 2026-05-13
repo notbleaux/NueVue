@@ -43,7 +43,9 @@ Ship the Foundation milestone that proves NueVue’s core promise: Nexus shows a
 - ARDs:
   - ARD-001: `docs/ard/ARD-001-nexus-office-scene-and-activity-backbone.md`
 - ADRs:
-  - (to be created)
+  - ADR-001: `docs/adr/ADR-001-activity-transport-and-replay.md`
+  - ADR-002: `docs/adr/ADR-002-office-scene-rendering-approach.md`
 - CRITs:
-  - (to be created)
-
+  - CRIT-001: `docs/crit/CRIT-001-foundation-design.md`
+- Splits:
+  - SPLITS-001: `docs/splits/SPLITS-001-okr-001-foundation.md`
