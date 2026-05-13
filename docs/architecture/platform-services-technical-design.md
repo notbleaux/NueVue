@@ -1,4 +1,4 @@
-# Platform Services Technical Design (NueVue / PixelOffice)
+# Platform Services Technical Design (NueVue, PixelOffice-inspired)
 
 ## System Overview
 

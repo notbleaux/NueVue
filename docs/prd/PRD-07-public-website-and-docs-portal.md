@@ -2,7 +2,7 @@
 
 ## Objective
 
-Provide a public-facing website and documentation portal that explains NueVue/PixelOffice, showcases the office visualization concept, and serves as the primary entry point for onboarding and product updates.
+Provide a public-facing website and documentation portal that explains NueVue (PixelOffice-inspired), showcases the office visualization concept, and serves as the primary entry point for onboarding and product updates.
 
 ## Users
 
@@ -14,7 +14,7 @@ Provide a public-facing website and documentation portal that explains NueVue/Pi
 
 1. **Public Website**
    - Product overview (what it is, who it’s for)
-   - Feature highlights (Nexus Command Hub, extension, platform services)
+   - Feature highlights (Nexus web app, browser extension, platform services)
    - Visual showcase of the office scene and agent roles
    - Roadmap and changelog surface
 
@@ -38,4 +38,3 @@ Provide a public-facing website and documentation portal that explains NueVue/Pi
 - Visitors can understand the concept and the three surfaces in under 2 minutes
 - Contributors can find the spec index and onboarding guide from the website
 - Website provides a stable surface for release notes and status updates
-

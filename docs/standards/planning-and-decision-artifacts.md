@@ -4,11 +4,11 @@ This document defines *what* planning/decision artifacts exist in NueVue and *wh
 
 ## Canonical Naming (Use These Terms)
 
-- **PixelOffice**: the platform concept and product philosophy.
+- **PixelOffice**: the inspiration and product philosophy (not a module name in this repo).
 - **NueVue**: this repository/workspace program name.
-- **Nexus** (Nexus Command Hub): the authenticated web app surface (dashboard + command center).
+- **Nexus**: the authenticated web app surface (dashboard + command center).
 - **Command Hub API**: the backend API contract consumed by Nexus and the browser extension.
-- **Office scene**: the animated visualization metaphor (rooms/zones + sprites) used by Nexus to show progress and social cues.
+- **Office scene**: the visualization metaphor (zones + sprites) used by Nexus to show progress and social cues.
 
 If a document needs to mention older or alternative names, define them once and then use the canonical terms for the rest of the document.
 
@@ -87,6 +87,16 @@ Rules:
 
 Not all work needs all artifacts. Use the smallest set that preserves clarity and safety.
 
+### ADR/CRIT Threshold Rules (Quick Check)
+
+ADR is **required** when a change includes a decision that would be costly to reverse or re-litigate later, including:
+- choosing between viable alternatives (e.g., SSE vs WebSocket, DOM/SVG vs Canvas),
+- introducing a new service boundary or dependency with operational tradeoffs,
+- changing contract/schema strategy (even if backwards-compatible),
+- adopting a new safety/review gate or irreversible action pattern.
+
+CRIT is **required** when the work is Tier 2, crosses a contract boundary, or changes a safety-critical workflow (auth, deploy/rollback, incident actions, billing, credential use). For Tier 1 work, CRIT is optional and should be used when risk or ambiguity is high.
+
 ### Tier 0: Low-Risk / Trivial Change
 
 Examples: typo fixes, rewording, small formatting changes, purely internal refactors with no behavior change.
@@ -129,8 +139,8 @@ Guideline: every meaningful state change should map to an activity event with a 
 ## Office Visualization Mapping (Recommended)
 
 Represent work as an animated office with social cues that reflect real delivery stages (not decoration):
-- **Rooms**: Planning (OKR/PRD), Architecture (ARD/ADR), Build Bay (implementation), Review Desk (CRIT/PR review), Ops War Room (release/incident).
-- **Cues**: presence (who is “at” a task), handoffs (agent walks documents between rooms), approvals (stamp animation), blockers (red folder/alert), escalations (manager NPC).
-- **Progress**: visible WIP limits per room, queue visualization for `queued -> in_progress -> review_pending -> completed`.
+- **Zones**: Planning (OKR/PRD), Architecture (ARD/ADR), Build (implementation), Review (CRIT/PR review), Ops (release/incident).
+- **Cues**: presence (who is “at” a task), handoffs (agent walks documents between zones), approvals (stamp animation), blockers (red folder/alert), escalations (manager NPC).
+- **Progress**: visible WIP limits per zone, queue visualization for `queued -> in_progress -> review_pending -> completed`.
 
 If animation is too heavy early on, start with a static office layout + subtle transitions, then layer richer animation later.

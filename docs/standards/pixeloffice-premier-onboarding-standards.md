@@ -10,7 +10,7 @@ PixelOffice combines practical software-development tooling with a manager-simul
 
 - **Platform concept name:** PixelOffice
 - **Repository/program name in this workspace:** NueVue
-- **Operational command-center surface:** Nexus Command Hub (web app module)
+- **Operational command-center surface:** Nexus (web app module)
 
 These names describe the same ecosystem from product, repository, and module viewpoints.
 
