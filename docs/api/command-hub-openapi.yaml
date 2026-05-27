@@ -3,7 +3,7 @@ info:
   title: NueVue Command Hub API
   version: 1.0.0
   description: >
-    API contract for command and query operations used by the Nexus Web App and Browser Extension.
+    API contract for command and query operations used by the NeXeZ web app (Nexus) and browser extension.
 servers:
   - url: https://api.nuevue.example.com/v1
 security:

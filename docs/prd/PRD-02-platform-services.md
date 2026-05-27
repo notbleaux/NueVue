@@ -2,14 +2,15 @@
 
 ## Objective
 
-Provide reliable backend services for workspace/project management, multi-agent workflow execution, and live activity delivery to the Nexus Web App and extension clients.
+Provide reliable backend services for workspace/project management, multi-agent workflow execution, and live activity delivery to the NeXeZ web app (Nexus) and extension clients.
 
 ## Service Scope
 
 1. **API Service**
-   - Manage users, workspaces, projects, milestones, tasks, releases
+   - Manage workspaces, projects, milestones, tasks, releases
    - Expose versioned REST endpoints
    - Enforce authentication and authorization on every route
+   - Identity, membership, and RBAC requirements are defined in PRD-05
 
 2. **Orchestration Service**
    - Route tasks to Planner, Builder, Reviewer, Operator roles

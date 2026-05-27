@@ -9,6 +9,12 @@ It combines:
 
 to simulate a manager-style experience where users can collaborate with AI agents, plan projects, and learn development workflows in a social, game-like environment.
 
+## Product Naming (Canonical)
+
+- **NeXeZ**: the website + authenticated web app experience (premium UI + visualization + command center).
+- **NuMuN platform services**: API + orchestration + realtime activity backbone powering NeXeZ and other clients.
+- **NueVue**: this repo/workspace program name (PixelOffice-inspired).
+
 ## Product Intent
 
 NueVue provides a pixel-sprite assistant that helps users:
@@ -37,10 +43,10 @@ The repository follows these baseline standards:
 - Lightweight AI interaction panel for in-browser workflow support.
 - Context bridge to connect page tasks with project boards.
 
-### 3) Website App Service Platform
-- User/workspace/project management.
-- Agent orchestration and task pipelines.
-- Startup templates and quickstart foundations.
+### 3) Public Website and Docs Portal
+- Public landing and product education.
+- Documentation and onboarding entry point.
+- Roadmap/changelog surface.
 
 ## AI Interaction Model
 
@@ -94,3 +100,4 @@ Single source of truth:
 
 - [`docs/specs/INDEX.md`](docs/specs/INDEX.md)
 - [`docs/standards/pixeloffice-premier-onboarding-standards.md`](docs/standards/pixeloffice-premier-onboarding-standards.md)
+- [`docs/standards/planning-and-decision-artifacts.md`](docs/standards/planning-and-decision-artifacts.md)

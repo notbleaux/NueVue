@@ -1,4 +1,4 @@
-# Platform Services Technical Design (NueVue / PixelOffice)
+# Platform Services Technical Design (NueVue, PixelOffice-inspired)
 
 ## System Overview
 
@@ -31,13 +31,19 @@ NueVue command operations use a hybrid model:
 
 ## Data Flow
 
-1. User submits command in Nexus UI or Extension
+1. User submits command in Nexus or Extension
 2. API validates and stores request
 3. Orchestration processes request and emits events
 4. Realtime service broadcasts events to subscribed clients
-5. Nexus UI updates command panel, timeline, and board state
+5. Nexus updates command panel, timeline, and board state
 
 ## Reliability and Observability
+
+## Local Dev and Deployment Baseline
+
+- **Local dev**: use Docker Compose to run NuMuN services together (API + orchestration + realtime) with a shared contracts version pinned for the workspace.
+- **Web surfaces**: deploy NeXeZ website/web app to Vercel.
+- **Services**: deploy NuMuN services to Railway or Render (environment separation per release stage).
 
 - Idempotency keys required on write commands
 - Retries with bounded exponential backoff
